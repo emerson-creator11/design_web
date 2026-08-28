@@ -1,25 +1,11 @@
-var nasc = 2009
-let nome = "Emerson"
-const vivo = true
+let nasc = prompt("Digite seu ano de nascimento: ");
+nasc = parseInt(nasc);
 
-function calcIdade(ano=2026){
-    let idade = ano - nasc;
-    let menor;
-    if (idade < 18){
-        menor = true;
-        var podebeber = false;
-    }
-    else{
-        menor= false;
-        var podebeber = true
-    }
-    alert(`${nome} é menor de idade? ${menor}\nidade: ${idade}\n pode beber: ${podebeber}.`)
-    return idade;
-   
+let vivo = confirm("se voce está vivo, clique ok: ");
 
+if(vivo){
+    alert(`voce tem ${2026-nasc} anos.`);
+
+}else{
+    ("voce foi de Vasco.");
 }
-
-calcIdade();
-/* var 'vaza ' a variavel dentro do escopo da mesma funcao 
-alert(`pode beber: ${podebeber}`);
-*/
