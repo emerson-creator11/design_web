@@ -1,10 +1,10 @@
-let foto =1;
+let i  =1;
 const imagem = document.getElementById("Foto");
 
 function proximo(e){
     e.preventDefault();
     if (foto < 6){
-        foto = foto + 1;
+        i = i + 1;
 
     }
     imagem.setAttribute("src", `./img/foto${i}.jpg`);
@@ -12,3 +12,15 @@ function proximo(e){
 }
 const prox= document.getElementById("prox");
 prox.addEventListener("click", proximo);
+
+function anterior(e){
+    e.preventDefault();
+    if(i>1){
+        i=i+1;
+    }
+    imagem.setAttribute("src", `./img/foto${i}.jpg`);
+
+
+}
+const ant = document.getElementById("ant");
+ant.addEventListener("click", anterior)
